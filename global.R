@@ -1,0 +1,16 @@
+library(dplyr)
+library(maps)
+library(sp)
+library(maptools)
+library(rgdal)
+library(rworldmap)
+
+# world <-  map("world", fill = TRUE, plot = FALSE)
+# IDs <- sapply(strsplit(shapefile$names, ":"), function(x) x[1])
+# shapefile <- map2SpatialPolygons(world, IDs=IDs, proj4string=CRS("+proj=longlat +datum=WGS84"))
+aps <- read.csv('Data/APS2015.csv', header = TRUE)
+nes <- read.csv('Data/NES2015.csv', header = TRUE)
+worldaps <- joinCountryData2Map(aps, joinCode = "NAME", nameJoinColumn = "Economy")
+worldnes <- joinCountryData2Map(nes, joinCode = "NAME", nameJoinColumn = "Economy")
+
+thispage <- reactiveValues()

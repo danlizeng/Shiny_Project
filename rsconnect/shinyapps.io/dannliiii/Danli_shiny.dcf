@@ -1,0 +1,10 @@
+name: Danli_shiny
+account: dannliiii
+server: shinyapps.io
+appId: 119246
+bundleId: 527799
+url: https://dannliiii.shinyapps.io/Danli_shiny/
+when: 1470764434.9987
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: draft.R|helpers.R
